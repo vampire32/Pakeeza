@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from "next/image";
-import Avatar1 from "../styles/images/avatar1.jpeg";
-import Avatar2 from "../styles/images/avatar2.jpeg";
-import Avatar3 from "../styles/images/avatar3.jpeg";
+import Avatar1 from "../styles/Images/avatar1.jpeg";
+import Avatar2 from "../styles/Images/avatar2.jpeg";
+import Avatar3 from "../styles/Images/avatar3.jpeg";
 
 export const Testimonials = () => {
   return (
