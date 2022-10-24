@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .fr-clearfix::after {
   clear: both;
   display: block;

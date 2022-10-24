@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import React, { useRef, useState } from "react";
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import C1 from '../styles/Images/banner_img_01.jpg'
@@ -14,6 +15,13 @@ import led from "../styles/Images/led.png";
 import wash from "../styles/Images/wash.png";
 import { Testimonials } from '../Components/Testimonials'
 import ContactForm from '../Components/ContactForm'
+import ProductCards from '../Components/ProductCards'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Pagination,Navigation } from "swiper";
 
 export default function Home() {
   return (
@@ -354,156 +362,58 @@ export default function Home() {
 				<h1 className="text-center font-bold text-[40px] pb-[4rem]">
 					Our New Brands
 				</h1>
-				<section class="text-gray-600 body-font">
-					<div class="container px-5 py-24 mx-auto">
-						<div class="flex flex-wrap -m-4">
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/420x260"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The Catalyzer
-									</h2>
-									<p class="mt-1">$16.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/421x261"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Shooting Stars
-									</h2>
-									<p class="mt-1">$21.15</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/422x262"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Neptune
-									</h2>
-									<p class="mt-1">$12.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/423x263"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The 400 Blows
-									</h2>
-									<p class="mt-1">$18.40</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/424x264"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The Catalyzer
-									</h2>
-									<p class="mt-1">$16.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/425x265"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Shooting Stars
-									</h2>
-									<p class="mt-1">$21.15</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/427x267"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Neptune
-									</h2>
-									<p class="mt-1">$12.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/428x268"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The 400 Blows
-									</h2>
-									<p class="mt-1">$18.40</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					loop={true}
+					loopFillGroupWithBlank={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+				</Swiper>
 			</div>
 			<section
 				className="u-clearfix u-color-scheme-u10 u-color-style-multicolor-1 u-grey-90 u__section_111"
@@ -569,156 +479,58 @@ export default function Home() {
 				<h1 className="text-center font-bold text-[40px] pb-[4rem]">
 					Our Trending
 				</h1>
-				<section class="text-gray-600 body-font">
-					<div class="container px-5 py-24 mx-auto">
-						<div class="flex flex-wrap -m-4">
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/420x260"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The Catalyzer
-									</h2>
-									<p class="mt-1">$16.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/421x261"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Shooting Stars
-									</h2>
-									<p class="mt-1">$21.15</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/422x262"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Neptune
-									</h2>
-									<p class="mt-1">$12.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/423x263"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The 400 Blows
-									</h2>
-									<p class="mt-1">$18.40</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/424x264"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The Catalyzer
-									</h2>
-									<p class="mt-1">$16.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/425x265"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Shooting Stars
-									</h2>
-									<p class="mt-1">$21.15</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/427x267"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										Neptune
-									</h2>
-									<p class="mt-1">$12.00</p>
-								</div>
-							</div>
-							<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-								<a class="block relative h-48 rounded overflow-hidden">
-									<img
-										alt="ecommerce"
-										class="object-cover object-center w-full h-full block"
-										src="https://dummyimage.com/428x268"
-									/>
-								</a>
-								<div class="mt-4">
-									<h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-										CATEGORY
-									</h3>
-									<h2 class="text-gray-900 title-font text-lg font-medium">
-										The 400 Blows
-									</h2>
-									<p class="mt-1">$18.40</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					loop={true}
+					loopFillGroupWithBlank={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+					<SwiperSlide>
+						<ProductCards />
+					</SwiperSlide>
+				</Swiper>
 			</div>
 			<Testimonials />
 			<section class="text-gray-600 body-font">
