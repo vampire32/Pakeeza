@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 const ProductCards = () => {
   return (
@@ -29,7 +30,7 @@ const ProductCards = () => {
 
 						<div class="flex items-center flex-wrap ">
 							<a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-								View
+								<Link href="/ProductV">View</Link>
 								<svg
 									class="w-4 h-4 ml-2"
 									viewBox="0 0 24 24"
