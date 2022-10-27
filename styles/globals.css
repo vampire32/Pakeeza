@@ -18,11 +18,7 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
- .bg-image {
-   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/login-bg.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+
 .fr-view img.fr-rounded,
 .fr-view .fr-img-caption.fr-rounded img {
   border-radius: 10px;
