@@ -1,12 +1,12 @@
 /* Carousel Hero */
 #template-mo-zay-hero-carousel .carousel-indicators li {
     margin-top: -50px;
-    background-color: #59ab6e;
+    background-color: #200b52;
 }
 
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
-    color: #59ab6e !important;
+    color: #ffae42!important;
     font-size: 2.8em !important;
 }
 
@@ -16,16 +16,17 @@
     color: #000 !important;
 }
 #template-mo-zay-hero-carousel {
-    background: #efefef !important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),#200b52;
+    color: white;
 }
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
-    color: #59ab6e !important;
+    color: #ffae42!important;
     font-size: 2.8em !important;
 }
  .fas {
      font-weight: 900;
-        color: #59ab6e !important;
+        color: #ffae42 !important;
  }
  .centerd{
     display: flex;
@@ -460,6 +461,11 @@
  .res3 {
      display: none !important;
  }
+ .bg-image{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
      .u-section-16 .u-form-1 {
          width: 240px;
      }
@@ -665,7 +671,7 @@
 
  .navbar-design a:hover {
 
-     color: #59ab6e!important;
+     color: #ffae42!important;
 
 
 

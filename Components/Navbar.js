@@ -152,29 +152,29 @@ const NavBar = () => {
 						<div className="flex items-center  mx-20  justify-evenly w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<span className=" font-bold text-xl cursor-pointer">
-									Pakeeza<span className="text-green-500">Electronics</span>
+									Pakeeza<span className="text-[#ffae42]">Electronics</span>
 								</span>
 							</div>
 							<div className="hidden res3 md:block">
 								<div className=" ml-10 flex items-baseline space-x-4">
-									<a className="cursor-pointer text-green-600 font-semibold px-3 py-2 text-md hover:font-black">
+									<a className="cursor-pointer text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black">
 										<Link activeClass="Home" href="/">
 											Home
 										</Link>
 									</a>
 
-									<a className="cursor-pointer text-green-600 font-semibold px-3 py-2 text-md hover:font-black">
+									<a className="cursor-pointer text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black">
 										<Link activeClass="Home" href="/About">
 											About
 										</Link>
 									</a>
-									<a className="cursor-pointer text-green-600 font-semibold px-3 py-2 text-md hover:font-black">
+									<a className="cursor-pointer text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black">
 										<Link activeClass="Home" href="/Services">
 											Services
 										</Link>
 									</a>
 
-									<a class="dropdown cursor-pointer text-green-600 font-semibold px-3 py-2 text-md hover:font-black">
+									<a class="dropdown cursor-pointer text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black">
 										<a
 											class=" dropdown-toggle"
 											id="navbarDropdown"
@@ -209,7 +209,7 @@ const NavBar = () => {
 										</ul>
 									</a>
 
-									<a className="cursor-pointer text-green-600 font-semibold px-3 py-2 text-md hover:font-black">
+									<a className=" text-[#ffae42] hover:text-[#ffae42]  font-semibold px-3 py-2 text-md hover:font-black">
 										<Link activeClass="Home" href="/Contact">
 											Contact
 										</Link>
@@ -218,19 +218,19 @@ const NavBar = () => {
 							</div>
 						</div>
 						<div className="flex res">
-							<button className=" btn btn-success cursor-pointer text-white font-semibold px-3 py-2 text-md hover:font-black">
-								<Link activeClass="Home" href="/Contact">
+							<button className=" btn bg-[#200b52] hover:bg-[#ffae42] cursor-pointer text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black">
+								<Link activeClass="Home" href="/Login">
 									Login
 								</Link>
 							</button>
 							<button
-								className="cursor-pointer  text-green-600 font-semibold px-3 py-2 text-md hover:font-black"
+								className="cursor-pointer  text-[#ffae42] font-semibold px-3 py-2 text-md hover:font-black"
 								onClick={() => setcart(true)}
 							>
 								<FaLuggageCart size={30} />
 							</button>
 						</div>
-						<div className="mr-10 flex lg:hidden ">
+						<div className="mr-10 flex lg:hidden justify-end ">
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
@@ -341,6 +341,17 @@ const NavBar = () => {
 								<a className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
 									<Link href="/home">Contact</Link>
 								</a>
+								<button className=" btn bg-[#200b52] hover:bg-[#ffae42] cursor-pointer  text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+									<Link activeClass="Home" href="/Login">
+										Login
+									</Link>
+								</button>
+								<button
+									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									onClick={() => setcart(true)}
+								>
+									<FaLuggageCart size={30} />
+								</button>
 							</div>
 						</div>
 					)}

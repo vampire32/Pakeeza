@@ -1,9 +1,9 @@
 import React from 'react'
-import C1 from "../styles/Images/banner_img_01.jpg";
+import C1 from "../styles/Images/Slide1.png";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
-import C2 from "../styles/Images/banner_img_02.jpg";
-import C3 from "../styles/Images/banner_img_03.jpg";
+import C2 from "../styles/Images/Slide2.png";
+import C3 from "../styles/Images/slide3.png";
 import Image from "next/image";
 
 const MainSlider = () => {
@@ -40,7 +40,7 @@ const MainSlider = () => {
 								</div>
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
-										<h1 class="h1 text-success">
+										<h1 class="h1 text-[#ffae42]">
 											<b>Zay</b> eCommerce
 										</h1>
 										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
@@ -50,7 +50,7 @@ const MainSlider = () => {
 											free provided by{" "}
 											<a
 												rel="sponsored noreferrer"
-												class="text-success"
+												class="text-[#ffae42]"
 												href="https://templatemo.com"
 												target="_blank"
 											>
@@ -59,7 +59,7 @@ const MainSlider = () => {
 											website. Image credits go to{" "}
 											<a
 												rel="sponsored noreferrer"
-												class="text-success"
+												class="text-[#ffae42]"
 												href="https://stories.freepik.com/"
 												target="_blank"
 											>
@@ -68,7 +68,7 @@ const MainSlider = () => {
 											,
 											<a
 												rel="sponsored noreferrer"
-												class="text-success"
+												class="text-[#ffae42]"
 												href="https://unsplash.com/"
 												target="_blank"
 											>
@@ -77,7 +77,7 @@ const MainSlider = () => {
 											and
 											<a
 												rel="sponsored noreferrer"
-												class="text-success"
+												class="text-[#ffae42]"
 												href="https://icons8.com/"
 												target="_blank"
 											>
@@ -100,50 +100,19 @@ const MainSlider = () => {
 								</div>
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
-										<h1 class="h1 text-success">
+										<h1 class="h1 text-[#ffae42]">
 											<b>Zay</b> eCommerce
 										</h1>
 										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
 										<p>
-											Zay Shop is an eCommerce HTML5 CSS template with latest
-											version of Bootstrap 5 (beta 1). This template is 100%
-											free provided by{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://templatemo.com"
-												target="_blank"
-											>
-												TemplateMo
-											</a>{" "}
-											website. Image credits go to{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://stories.freepik.com/"
-												target="_blank"
-											>
-												Freepik Stories
-											</a>
-											,
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://unsplash.com/"
-												target="_blank"
-											>
-												Unsplash
-											</a>{" "}
-											and
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://icons8.com/"
-												target="_blank"
-											>
-												Icons 8
-											</a>
-											.
+											Ex ut officia reprehenderit laborum irure culpa labore
+											aliqua. Cupidatat do sit ipsum et quis consequat velit
+											velit. Culpa Lorem amet voluptate irure cupidatat officia
+											commodo voluptate Lorem aliqua mollit. Sunt deserunt
+											reprehenderit dolor deserunt. Dolore sit proident commodo
+											qui fugiat. Consequat consectetur consequat nulla ex sunt
+											labore aliquip culpa adipisicing voluptate deserunt magna
+											ad nisi. Commodo aute est proident tempor. .
 										</p>
 									</div>
 								</div>
@@ -160,50 +129,23 @@ const MainSlider = () => {
 								</div>
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
-										<h1 class="h1 text-success">
+										<h1 class="h1 text-[#ffae42]">
 											<b>Zay</b> eCommerce
 										</h1>
 										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
 										<p>
-											Zay Shop is an eCommerce HTML5 CSS template with latest
-											version of Bootstrap 5 (beta 1). This template is 100%
-											free provided by{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://templatemo.com"
-												target="_blank"
-											>
-												TemplateMo
-											</a>{" "}
-											website. Image credits go to{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://stories.freepik.com/"
-												target="_blank"
-											>
-												Freepik Stories
-											</a>
-											,
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://unsplash.com/"
-												target="_blank"
-											>
-												Unsplash
-											</a>{" "}
-											and
-											<a
-												rel="sponsored noreferrer"
-												class="text-success"
-												href="https://icons8.com/"
-												target="_blank"
-											>
-												Icons 8
-											</a>
-											.
+											Ut ut esse aute labore laborum do irure anim laboris amet.
+											Fugiat velit esse sunt consectetur elit mollit. Do
+											occaecat tempor irure eu id exercitation. Velit aliqua est
+											et sunt mollit eiusmod ut anim. Commodo aliqua voluptate
+											duis ipsum proident reprehenderit commodo enim et. Commodo
+											incididunt quis nostrud sit velit esse magna ipsum aliqua
+											et id ipsum in. Deserunt amet quis aliquip nulla
+											exercitation non adipisicing occaecat sint elit dolor elit
+											fugiat. Aute occaecat officia culpa in mollit sit velit
+											duis nostrud enim aute. Ad proident irure et id aliqua
+											voluptate reprehenderit amet consectetur cillum aliquip
+											mollit amet. .
 										</p>
 									</div>
 								</div>
@@ -219,7 +161,7 @@ const MainSlider = () => {
 				>
 					{/* <i class="fas fa-chevron-left"></i> */}
 
-					<FaChevronLeft size={50} color="#59ab6e" />
+					<FaChevronLeft size={50} color="#ffae42" />
 				</a>
 				<a
 					class="carousel-control-next text-decoration-none w-auto pe-3"
@@ -228,7 +170,7 @@ const MainSlider = () => {
 					data-bs-slide="next"
 				>
 					{/* <i class="fas fa-chevron-right"></i> */}
-					<FaChevronRight size={50} color="#59ab6e" />
+					<FaChevronRight size={50} color="#ffae42" />
 				</a>
 			</div>
 		</div>
