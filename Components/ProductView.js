@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
+import Link from "next/link";
 
 const product = {
 	name: "Basic Tee 6-Pack",
@@ -65,7 +66,6 @@ const ProductView = () => {
 			const [selectedSize, setSelectedSize] = useState(product.sizes[2]) 
 	return (
 		<div>
-			
 			(
 			<div className="bg-white">
 				<div className="pt-6">
@@ -312,13 +312,22 @@ const ProductView = () => {
 										</div>
 									</RadioGroup>
 								</div>
-
-								<button
-									type="submit"
-									className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-								>
-									Add to bag
-								</button>
+								<div className="flex ">
+									<button
+										type="submit"
+										className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-[#9e7098]  py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+									>
+										Add to Cart
+									</button>
+									<Link href="/CheckoutPage">
+										<a
+											type="submit"
+											className="mt-10 ml-4 flex w-full items-center hover:text-white justify-center rounded-md  border-2 border-[#9e7098]   py-3 px-8 text-base font-medium text-[#ffae42] hover:bg-[#9e7098] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+										>
+											Buy Now
+										</a>
+									</Link>
+								</div>
 							</form>
 						</div>
 

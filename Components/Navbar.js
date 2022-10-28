@@ -119,17 +119,17 @@ const NavBar = () => {
 												<div className="mt-6">
 													<a
 														href="#"
-														className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+														className="flex items-center justify-center rounded-md border border-transparent bg-[#9e7098]  px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[#9e7098] "
 													>
 														Checkout
 													</a>
 												</div>
-												<div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+												<div className="mt-6 flex justify-center text-center text-sm text-[#ffae42]">
 													<p>
 														or
 														<button
 															type="button"
-															className="font-medium text-indigo-600 hover:text-indigo-500"
+															className="font-medium text-[#ffae42] hover:text-[#ffae42]"
 															onClick={() => setcart(false)}
 														>
 															Continue Shopping

@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import '../styles/Home.css'
 import '../styles/filters.css'
 import '../styles/about.css'
-
+import '../styles/checkout.css'
 import "../styles/globals.css";
 import NavBar from "../Components/Navbar";
 
