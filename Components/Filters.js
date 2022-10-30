@@ -10,7 +10,34 @@ import {
 	Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ProductCards from "./ProductCards";
-
+import C1 from "../styles/Images/cart.jpg";
+import C2 from "../styles/Images/cart-2.jpg";
+import C3 from "../styles/Images/cart-3.jpg";
+import C4 from "../styles/Images/cart-4.jpg";
+const product = {
+	slug: "Basic Tee 6-Pack",
+	price: "$192",
+	href: "#",
+	brand: "Bonnza",
+	images: [
+		{
+			src: C1,
+			alt: "Two each of gray, white, and black shirts laying flat.",
+		},
+		{
+			src: C2,
+			alt: "Model wearing plain black basic tee.",
+		},
+		{
+			src: C3,
+			alt: "Model wearing plain gray basic tee.",
+		},
+		{
+			src: C4,
+			alt: "Model wearing plain white basic tee.",
+		},
+	],
+};
 const sortOptions = [
 	{ name: "Most Popular", href: "#", current: true },
 	{ name: "Best Rating", href: "#", current: false },
@@ -351,34 +378,84 @@ const Filters = () => {
 								<div className=" lg:h-full">
 									<div className="row ">
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 										<div className="col-md-4">
-											<ProductCards />
+											<ProductCards
+												slug={product.slug}
+												brands={product.brand}
+												price={product.price}
+												img={product.images[0]}
+											/>
 										</div>
 									</div>
 								</div>

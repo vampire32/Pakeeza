@@ -6,11 +6,13 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Cart from "./Cart";
+import Image from "next/image";
 
 
 
 
-const NavBar = () => {
+const NavBar = ({ Carts, addToCart, RemoveFromcart, clearCart, SubTotal }) => {
+	
 	const [cart, setcart] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 	return (
@@ -69,40 +71,44 @@ const NavBar = () => {
 															role="list"
 															className="-my-6 divide-y divide-gray-200"
 														>
-															<li className="flex py-6">
-																<div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-																	<img
-																		src=""
-																		className="h-full w-full object-cover object-center"
-																	/>
-																</div>
-
-																<div className="ml-4 flex flex-1 flex-col">
-																	<div>
-																		<div className="flex justify-between text-base font-medium text-gray-900">
-																			<h3>
-																				<a href="#">AC</a>
-																			</h3>
-																			<p className="ml-4">200pkr</p>
+															{Object.keys(Carts).map((k) => {
+																return (
+																	<li key={k} className="flex py-6">
+																		<div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+																			<Image
+																				src={Carts[k].img}
+																				alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+																				class="h-full w-full object-cover object-center"
+																			/>
 																		</div>
-																		<p className="mt-1 text-sm text-gray-500">
-																			Blue
-																		</p>
-																	</div>
-																	<div className="flex flex-1 items-end justify-between text-sm">
-																		<p className="text-gray-500">Qty 5</p>
-
-																		<div className="flex">
-																			<button
-																				type="button"
-																				className="font-medium text-indigo-600 hover:text-indigo-500"
-																			>
-																				Remove
-																			</button>
+																		<div className="ml-4 flex flex-1 flex-col">
+																			<div>
+																				<div className="flex justify-between text-base font-medium text-gray-900">
+																					<h3>
+																						<a href="#">{Carts[k].name}</a>
+																					</h3>
+																					<h3>
+																						<a href="#">{Carts[k].id}</a>
+																					</h3>
+																					<p className="ml-4">
+																						{Carts[k].price}
+																					</p>
+																				</div>
+																				<p className="mt-1 text-sm text-gray-500">
+																					Blue
+																				</p>
+																			</div>
+																			<div className="flex flex-1 items-end justify-between text-sm">
+																				<p className="text-gray-500">
+																					{Carts[k].qty}
+																				</p>
+																			</div>
 																		</div>
-																	</div>
-																</div>
-															</li>
+																		
+																	</li>
+															
+																);
+															})}
 														</ul>
 													</div>
 												</div>
@@ -111,18 +117,25 @@ const NavBar = () => {
 											<div className="border-t border-gray-200 py-6 px-4 sm:px-6">
 												<div className="flex justify-between text-base font-medium text-gray-900">
 													<p>Subtotal</p>
-													<p>$262.00</p>
+													<p>${SubTotal}</p>
+													{console.log(SubTotal)}
 												</div>
 												<p className="mt-0.5 text-sm text-gray-500">
 													Shipping and taxes calculated at checkout.
 												</p>
-												<div className="mt-6">
+												<div className="mt-6 flex justify-evenly">
 													<a
 														href="#"
 														className="flex items-center justify-center rounded-md border border-transparent bg-[#9e7098]  px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[#9e7098] "
 													>
 														Checkout
 													</a>
+													<button
+														onClick={clearCart}
+														className="flex items-center justify-center rounded-md border border-transparent bg-[#9e7098]  px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[#9e7098] "
+													>
+														Clear Cart
+													</button>
 												</div>
 												<div className="mt-6 flex justify-center text-center text-sm text-[#ffae42]">
 													<p>

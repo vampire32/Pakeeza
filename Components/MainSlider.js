@@ -28,6 +28,14 @@ const MainSlider = () => {
 						data-bs-target="#template-mo-zay-hero-carousel"
 						data-bs-slide-to="2"
 					></li>
+					<li
+						data-bs-target="#template-mo-zay-hero-carousel"
+						data-bs-slide-to="3"
+					></li>
+					<li
+						data-bs-target="#template-mo-zay-hero-carousel"
+						data-bs-slide-to="4"
+					></li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -41,49 +49,15 @@ const MainSlider = () => {
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
 										<h1 class="h1 text-[#ffae42]">
-											<b>Zay</b> eCommerce
+											<b>Pakeeza </b> Electronics
 										</h1>
-										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
+										<h3 class="h2">
+											GENUINE ELECTRONICS AND LIFESTYLE STORE IN PAKISTAN.
+										</h3>
 										<p>
-											Zay Shop is an eCommerce HTML5 CSS template with latest
-											version of Bootstrap 5 (beta 1). This template is 100%
-											free provided by{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-[#ffae42]"
-												href="https://templatemo.com"
-												target="_blank"
-											>
-												TemplateMo
-											</a>{" "}
-											website. Image credits go to{" "}
-											<a
-												rel="sponsored noreferrer"
-												class="text-[#ffae42]"
-												href="https://stories.freepik.com/"
-												target="_blank"
-											>
-												Freepik Stories
-											</a>
-											,
-											<a
-												rel="sponsored noreferrer"
-												class="text-[#ffae42]"
-												href="https://unsplash.com/"
-												target="_blank"
-											>
-												Unsplash
-											</a>{" "}
-											and
-											<a
-												rel="sponsored noreferrer"
-												class="text-[#ffae42]"
-												href="https://icons8.com/"
-												target="_blank"
-											>
-												Icons 8
-											</a>
-											.
+											At Pakeeza Electronics, our customers enjoy a huge range
+											of genuine and reliable electronics, appliances, LED TVs,
+											mobiles, and accessories at the best prices
 										</p>
 									</div>
 								</div>
@@ -101,18 +75,15 @@ const MainSlider = () => {
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
 										<h1 class="h1 text-[#ffae42]">
-											<b>Zay</b> eCommerce
+											<b>Pakeeza </b> Electronics
 										</h1>
-										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
+										<h3 class="h2">
+											Best Reliable ELECTRONICS STORE IN PAKISTAN
+										</h3>
 										<p>
-											Ex ut officia reprehenderit laborum irure culpa labore
-											aliqua. Cupidatat do sit ipsum et quis consequat velit
-											velit. Culpa Lorem amet voluptate irure cupidatat officia
-											commodo voluptate Lorem aliqua mollit. Sunt deserunt
-											reprehenderit dolor deserunt. Dolore sit proident commodo
-											qui fugiat. Consequat consectetur consequat nulla ex sunt
-											labore aliquip culpa adipisicing voluptate deserunt magna
-											ad nisi. Commodo aute est proident tempor. .
+											At Pakeeza Electronics, you will be shopping for
+											authentic, reliable, and genuine products that are sourced
+											only from authorized dealers.
 										</p>
 									</div>
 								</div>
@@ -130,22 +101,64 @@ const MainSlider = () => {
 								<div class="col-lg-6 mb-0 d-flex align-items-center">
 									<div class="text-align-left align-self-center">
 										<h1 class="h1 text-[#ffae42]">
-											<b>Zay</b> eCommerce
+											<b>Pakeeza </b> Electronics
 										</h1>
-										<h3 class="h2">Tiny and Perfect eCommerce Template</h3>
+										<h3 class="h2">AIR-CON & AIR COOLER STORE IN PAKISTAN.</h3>
 										<p>
-											Ut ut esse aute labore laborum do irure anim laboris amet.
-											Fugiat velit esse sunt consectetur elit mollit. Do
-											occaecat tempor irure eu id exercitation. Velit aliqua est
-											et sunt mollit eiusmod ut anim. Commodo aliqua voluptate
-											duis ipsum proident reprehenderit commodo enim et. Commodo
-											incididunt quis nostrud sit velit esse magna ipsum aliqua
-											et id ipsum in. Deserunt amet quis aliquip nulla
-											exercitation non adipisicing occaecat sint elit dolor elit
-											fugiat. Aute occaecat officia culpa in mollit sit velit
-											duis nostrud enim aute. Ad proident irure et id aliqua
-											voluptate reprehenderit amet consectetur cillum aliquip
-											mollit amet. .
+											delivered right to their doorstep. Compared to a number of
+											marketplaces that sell the very same items from
+											third-party vendors with no control over the quality or
+											originality of the product.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="container">
+							<div class="row p-5">
+								<div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+									<div class="img-fluid">
+										<Image src={C2} alt="" />
+									</div>
+								</div>
+								<div class="col-lg-6 mb-0 d-flex align-items-center">
+									<div class="text-align-left align-self-center">
+										<h1 class="h1 text-[#ffae42]">
+											<b>Pakeeza </b> Electronics
+										</h1>
+										<h3 class="h2">
+											REFRIGERATOR & FREEZERS STORE IN PAKISTAN.
+										</h3>
+										<p>
+											At Pakeeza Electronics store, you can acquire any type of
+											refrigerator and freezer at cheap rates. In market, we are
+											giving good prices as compared to others electronics shops
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="container">
+							<div class="row p-5">
+								<div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+									<div class="img-fluid">
+										<Image src={C2} alt="" />
+									</div>
+								</div>
+								<div class="col-lg-6 mb-0 d-flex align-items-center">
+									<div class="text-align-left align-self-center">
+										<h1 class="h1 text-[#ffae42]">
+											<b>Pakeeza </b> Electronics
+										</h1>
+										<h3 class="h2">HOME APPLIANCES STORE IN PAKISTAN</h3>
+										<p>
+											At Pakeeza Electronics store, you can acquire any type of
+											home appliance at cheap rates. In market, we are giving
+											good prices as compared to an others electronics shops.
 										</p>
 									</div>
 								</div>
