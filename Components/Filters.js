@@ -94,7 +94,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
 
-const Filters = () => {
+const Filters = (props) => {
      const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   return (
 		<div className="bg-white">
@@ -377,84 +377,13 @@ const Filters = () => {
 								{/* Replace with your content */}
 								<div className=" lg:h-full">
 									<div className="row ">
-										<div className="col-md-4">
+										<div className="col-md-4 ">
 											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
-											/>
-										</div>
-										<div className="col-md-4">
-											<ProductCards
-												slug={product.slug}
-												brands={product.brand}
-												price={product.price}
-												img={product.images[0]}
+												slug={props.name}
+												brands={props.brand}
+												price={props.price}
+												Picture={props.image}
+												Model={props.model}
 											/>
 										</div>
 									</div>
@@ -468,6 +397,7 @@ const Filters = () => {
 			</div>
 		</div>
 	);
+	
 }
 
 export default Filters

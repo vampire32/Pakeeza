@@ -1,21 +1,21 @@
-import Head from 'next/head'
+import Head from "next/head";
 import React, { useRef, useState } from "react";
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import C1 from '../styles/Images/Slide1.png'
-import {FaChevronRight} from 'react-icons/fa'
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import C1 from "../styles/Images/Slide1.png";
+import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
-import C2 from '../styles/Images/Slide2.png'
+import C2 from "../styles/Images/Slide2.png";
 import C3 from "../styles/Images/slide3.png";
-import home from '../styles/Images/homeA.png'
+import home from "../styles/Images/homeA.png";
 import ref from "../styles/Images/Freezer.png";
 import air from "../styles/Images/air-cooler.png";
 import kitch from "../styles/Images/Kitchen.png";
 import led from "../styles/Images/LEDS.png";
 import wash from "../styles/Images/washM.png";
-import { Testimonials } from '../Components/Testimonials'
-import ContactForm from '../Components/ContactForm'
-import ProductCards from '../Components/ProductCards'
+import { Testimonials } from "../Components/Testimonials";
+import ContactForm from "../Components/ContactForm";
+import ProductCards from "../Components/ProductCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -31,11 +31,11 @@ import b3 from "../styles/Images/brand-3.png";
 import b4 from "../styles/Images/brand-4.png";
 import b5 from "../styles/Images/brand-5.png";
 
-
-import { Pagination,Navigation } from "swiper";
-import MainSlider from '../Components/MainSlider';
-import Brands from '../Components/Brands';
-import Dlivery from '../Components/Dlivery';
+import { Pagination, Navigation } from "swiper";
+import MainSlider from "../Components/MainSlider";
+import Brands from "../Components/Brands";
+import Dlivery from "../Components/Dlivery";
+import axios from "axios";
 const product = {
 	slug: "Basic Tee 6-Pack",
 	price: "$192",
@@ -60,8 +60,9 @@ const product = {
 		},
 	],
 };
-export default function Home() {
-  return (
+
+const Home = (props) => {
+	return (
 		<div>
 			<Head>
 				<title>Pakeeza Electronics</title>
@@ -69,132 +70,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<MainSlider />
-			<Brands/>
-			
-			<div className="container mt-[3rem]">
-				<h1 className="text-center text-[40px] font-bold pb-[4rem] text-[#ffae42]">
-					TOP CATEGORIES
-				</h1>
-				<div class="main-banner" id="top">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="left-content">
-									<div class="thumb">
-										<div class="inner-content">
-											<h4>We Are Hexashop</h4>
-											<span>Awesome, clean &amp; creative HTML5 Template</span>
-											<div class="main-border-button">
-												<a href="#">Purchase Now!</a>
-											</div>
-										</div>
-
-										<img src="https://images.unsplash.com/photo-1667140803257-3ebb09a2dffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=974&q=80" />
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="right-content">
-									<div class="row">
-										<div class="col-lg-6">
-											<div class="right-first-image">
-												<div class="thumb">
-													<div class="inner-content">
-														<h4>Women</h4>
-														<span>Best Clothes For Women</span>
-													</div>
-													<div class="hover-content">
-														<div class="inner">
-															<h4>Women</h4>
-															<p>
-																Lorem ipsum dolor sit amet, conservisii ctetur
-																adipiscing elit incid.
-															</p>
-															<div class="main-border-button">
-																<a href="#">Discover More</a>
-															</div>
-														</div>
-													</div>
-													<img src="https://images.unsplash.com/photo-1667140638368-9d6b2ebf5a19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=978&q=80" />
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="right-first-image">
-												<div class="thumb">
-													<div class="inner-content">
-														<h4>Men</h4>
-														<span>Best Clothes For Men</span>
-													</div>
-													<div class="hover-content">
-														<div class="inner">
-															<h4>Men</h4>
-															<p>
-																Lorem ipsum dolor sit amet, conservisii ctetur
-																adipiscing elit incid.
-															</p>
-															<div class="main-border-button">
-																<a href="#">Discover More</a>
-															</div>
-														</div>
-													</div>
-													<img src="https://images.unsplash.com/photo-1667140679355-2c7dc73680c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=977&q=80" />
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="right-first-image">
-												<div class="thumb">
-													<div class="inner-content">
-														<h4>Kids</h4>
-														<span>Best Clothes For Kids</span>
-													</div>
-													<div class="hover-content">
-														<div class="inner">
-															<h4>Kids</h4>
-															<p>
-																Lorem ipsum dolor sit amet, conservisii ctetur
-																adipiscing elit incid.
-															</p>
-															<div class="main-border-button">
-																<a href="#">Discover More</a>
-															</div>
-														</div>
-													</div>
-													<img src="https://images.unsplash.com/photo-1667140719810-d62e48659e21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=977&q=80" />
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="right-first-image">
-												<div class="thumb">
-													<div class="inner-content">
-														<h4>Accessories</h4>
-														<span>Best Trend Accessories</span>
-													</div>
-													<div class="hover-content">
-														<div class="inner">
-															<h4>Accessories</h4>
-															<p>
-																Lorem ipsum dolor sit amet, conservisii ctetur
-																adipiscing elit incid.
-															</p>
-															<div class="main-border-button">
-																<a href="#">Discover More</a>
-															</div>
-														</div>
-													</div>
-													<img src="https://images.unsplash.com/photo-1667140763184-ea30b8d2a047?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=977&q=80" />
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<Brands />
 			<section class="container py-5">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 pb-5">
@@ -243,10 +119,17 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<div className="conatiner mt-[4rem]">
-				<h1 className="text-center font-bold text-[40px] pb-[4rem] text-[#ffae42]">
-					Latests
+
+			<div className="container mt-[3rem]">
+				<h1 className="text-center text-[40px] font-bold pb-[4rem] text-[#ffae42]">
+					TOP CATEGORIES
 				</h1>
+			</div>
+
+			<div className="conatiner mt-[4rem]">
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					AIR-CON & AIR COOLER
+				</h3>
 				<Swiper
 					breakpoints={{
 						640: {
@@ -260,8 +143,7 @@ export default function Home() {
 						},
 					}}
 					spaceBetween={30}
-					loop={true}
-					loopFillGroupWithBlank={true}
+					freeMode={true}
 					pagination={{
 						clickable: true,
 					}}
@@ -271,85 +153,30 @@ export default function Home() {
 					modules={[Pagination, Navigation]}
 					className="mySwiper"
 				>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards
-							slug={product.slug}
-							brands={product.brand}
-							price={product.price}
-							img={product.images[0]}
-						/>
-					</SwiperSlide>
+					{props.productsData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+									Model={item.attributes.Model}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
 				</Swiper>
 			</div>
-			<Dlivery/>
+			{/* <Dlivery /> */}
 			<div className="conatiner mt-[4rem]">
-				<h1 className="text-center font-bold text-[40px] pb-[4rem] text-[#ffae42]">
-					Our Trending
-				</h1>
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					REFRIGERATOR & FREEZERS
+				</h3>
 				<Swiper
 					breakpoints={{
 						640: {
@@ -363,8 +190,7 @@ export default function Home() {
 						},
 					}}
 					spaceBetween={30}
-					loop={true}
-					loopFillGroupWithBlank={true}
+					freeMode={true}
 					pagination={{
 						clickable: true,
 					}}
@@ -374,35 +200,215 @@ export default function Home() {
 					modules={[Pagination, Navigation]}
 					className="mySwiper"
 				>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
-					<SwiperSlide>
-						<ProductCards />
-					</SwiperSlide>
+					{props.FreezerData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+						console.log(img);
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									Model={item.attributes.Model}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
 				</Swiper>
 			</div>
+			<div className="conatiner mt-[4rem]">
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					LED TV & SOUND SYSTEM
+				</h3>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					freeMode={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					{props.LEDData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+						console.log(img);
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									Model={item.attributes.Model}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</div>
+			<div className="conatiner mt-[4rem]">
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					HOME APPLIANCES
+				</h3>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					freeMode={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					{props.HomeData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+						console.log(img);
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									Model={item.attributes.Model}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</div>
+			<div className="conatiner mt-[4rem]">
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					BUILT-IN KITCHEN
+				</h3>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					freeMode={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					{props.KitchenData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+						console.log(img);
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									Model={item.attributes.Model}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</div>
+			<div className="conatiner mt-[4rem]">
+				<h3 className=" font-bold text-[22px] pb-[2rem] ml-5 text-[#ffae42]">
+					WASHING SOLUTIONS
+				</h3>
+				<Swiper
+					breakpoints={{
+						640: {
+							slidesPerView: 1,
+						},
+						768: {
+							slidesPerView: 2,
+						},
+						1199: {
+							slidesPerView: 3,
+						},
+					}}
+					spaceBetween={30}
+					freeMode={true}
+					pagination={{
+						clickable: true,
+					}}
+					navigation={{
+						clickable: true,
+					}}
+					modules={[Pagination, Navigation]}
+					className="mySwiper"
+				>
+					{props.WashingData.data.map((item) => {
+						let imgurl = "https://glacial-woodland-47482.herokuapp.com";
+						let img = item.attributes.img.data.attributes.url;
+						console.log(img);
+
+						return (
+							<SwiperSlide key={item.id}>
+								<ProductCards
+									slug={item.attributes.Name}
+									Model={item.attributes.Model}
+									brands={item.attributes.Brand}
+									price={item.attributes.Price}
+									Picture={imgurl + img}
+								/>
+								;
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</div>
+			<Dlivery />
 			<Testimonials />
 			<section class="text-gray-600 body-font">
 				<div class="container px-5 py-24 mx-auto">
@@ -503,4 +509,48 @@ export default function Home() {
 			</section>
 		</div>
 	);
+};
+export async function getStaticProps(context) {
+	let headers = {
+		Authorization:
+			"e4cbdda2da4876ca76a1458aece14ae1e513d4f509c2ca53fba1368fcd806d0a93f30f4dde98050a933ff4b88fa7581685e5761c9f9c6413cd9fb0994fd045c78c046b29fe5e179e25f2075d82285f7cdc147a4b66f6a93475a24422e4a7e2aeb2f88be57addcd4e54e8be86106da6ae83035fb39710f87b087c241221cddcbf",
+	};
+	let a = await fetch("https://glacial-woodland-47482.herokuapp.com/api/air-con-and-air-coolers?populate=*",
+		(headers = headers)
+	);
+	let b= await fetch(
+		"https://glacial-woodland-47482.herokuapp.com/api/refrigerator-and-freezers?populate=*",
+		(headers = headers)
+	);
+	let c = await fetch(
+		"https://glacial-woodland-47482.herokuapp.com/api/home-appliances?populate=*",
+		(headers = headers)
+	);
+	let d= await fetch("https://glacial-woodland-47482.herokuapp.com/api/built-in-kitchens?populate=*",
+			(headers = headers)
+		)
+	
+	let e = await fetch(
+		"https://glacial-woodland-47482.herokuapp.com/api/led-tv-and-sound-systems?populate=*",
+		(headers = headers)
+	);
+	let f = await fetch(
+		"https://glacial-woodland-47482.herokuapp.com/api/washing-solutions?populate=*",
+		(headers = headers)
+	);
+	
+
+	let productsData = await a.json();
+	let FreezerData = await b.json();
+	let HomeData = await c.json();
+	let KitchenData = await d.json();
+	let LEDData = await e.json();
+	let WashingData = await f.json();
+	console.log(FreezerData.data)
+	
+	return {
+		props: { productsData: productsData, FreezerData: FreezerData,LEDData:LEDData,HomeData:HomeData,KitchenData:KitchenData,WashingData:WashingData },
+		// will be passed to the page component as props
+	};
 }
+export default Home;
